@@ -1,0 +1,101 @@
+/* info details */
+.left > #info_detail > .top{
+    background-color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 8px rgb(177, 175, 175);
+}
+
+.left > #info_detail > .top > .other > .back_home > a{
+    display: inline-block;
+    box-sizing: border-box;
+    color: rgb(92, 92, 187);
+    margin-right: 5px;
+    cursor: pointer;
+}
+.left > #info_detail > .top > .other > .title{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.left > #info_detail > .top > .other > .remark{
+    color: rgb(145, 141, 141);
+    margin-bottom: 15px;
+}
+
+.left > #info_detail > .top > .other > .remark a{
+    color: rgb(92, 92, 187);
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.left > #info_detail > .top > .content{
+    padding-top: 15px;
+}
+
+/* middle common */
+.left > .detail_common{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgb(177, 175, 175);
+}
+
+/* bottom common */
+.left > .info_common{
+    background-color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 8px rgb(177, 175, 175);
+}
+.left > .info_common > .title{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.left > .info_common input,button{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    outline: none;
+    width: 220px;
+}
+
+.left > .info_common > .common_text{
+    display: inline-block;
+    margin: 10px 0px;
+}
+
+.left > .info_common > .common_text > textarea{
+    width: 650px;
+    border-radius: 5px;
+    height: 100px;
+}
+.left > .info_common > .code{
+    position: relative;
+}
+.left > .info_common > .code > span > svg{
+    position: absolute;
+    top: -9px;
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.left > .info_common > .btnBox {
+    margin-top: 20px;
+}
+.left > .info_common > .btnBox >button {
+    width: 80px;
+}
+.left > .info_common > .btnBox >button:hover {
+    background-color: rgb(209, 191, 179);
+}

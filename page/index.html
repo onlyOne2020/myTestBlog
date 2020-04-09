@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="index"><a href="#">个人博客</a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="./html/sitmap.html">地图</a></li>
+                    <li><a href="./html/about.html">关于</a></li>
+                    <li><a href="./html/message.html">留言</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="输入关键词查找">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+    <div class="bodyer">
+        <div class="left">
+            <div class="everyday" id="every_day">
+                <span class="title"><a href="./html/edit.html">{{title}}</a></span>
+                <p>{{content}}</p>
+            </div>
+            <div class="article_list" id="article_list">
+                <div v-for="article in articleList" class="article_item">
+                    <span class="title"><a :href="`./html/detail.html?bId=`+article.id">{{article.title}}</a></span>
+                    <p class="content">{{article.content}}</p>
+                    <p class="remark">发布于{{article.date}} | 浏览({{article.views}}) | Tags：{{article.tags}}</p>
+                </div>
+                <el-pagination background layout="prev, pager, next" @current-change="currentChange" :total="totalCount">
+                </el-pagination>
+            </div>
+        </div>
+        <div class="right">
+            <div class="module" id="random_cloud">
+                <span class="title">{{title}}</span>
+                <div class="random_list random_tag">
+                    <a href="" v-for="tag in tags" :style="{color:color(),fontSize:size()}">{{tag}}</a>
+                </div>
+            </div>
+            <div class="module" id="hot_news">
+                <span class="title">{{title}}</span>
+                <div class="random_list">
+                    <ul class="hot">
+                        <li :class="{underline:item.underline}" v-for="item in news"><a href="">{{item.content}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="module" id="new_common">
+                <span class="title">{{title}}</span>
+                <div class="random_list">
+                    <div v-for="item in common" :class="{underline:item.underline}" class="common">
+                        <div class="title">
+                            <span>{{item.title}}</span>
+                            <span>{{item.date}}</span>
+                        </div>
+                        <div class="desc"><a href="">{{item.desc}}</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="module">
+                <span class="title">友情链接</span>
+                <div class="random_list">
+                    <div class="link underline">
+                        <div class="title">
+                            <a>挨踢茶馆</a>
+                            <a>个人博客</a>
+                            <a>佛布朗斯基</a>
+                        </div>
+                    </div>
+                    <div class="link underline">
+                        <div class="title">
+                            <a>挨踢茶馆</a>
+                            <a>个人博客</a>
+                            <a>佛布朗斯基</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <ul>
+            <li v-for='item in content'><a>{{item}}</a></li>
+        </ul>
+        <P>{{right}}</P>
+    </footer>
+</body>
+<script src="./Js/vue.js"></script>
+<script src="./Js/axios.min.js"></script>
+<script src="./Js/index.js"></script>
+<script src="./Js/element.js"></script>
+<script src="./Js/base.js"></script>
+
+
+
+</html>

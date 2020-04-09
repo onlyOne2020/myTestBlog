@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="index"><a href="../index.html">个人博客</a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="./sitmap.html">地图</a></li>
+                    <li><a href="./about.html">关于</a></li>
+                    <li><a href="./message.html">留言</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="输入关键词查找">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+    <div class="bodyer">
+        <div class="left">
+            <div id="info_detail">
+                <div class="top" v-for="item in info">
+                    <div class="other">
+                        <span class="back_home">当前位置: <a href="../index.html">首页»</a>详情</span>
+                        <p class="title">{{item.title}}</p>
+                        <p class="remark">发布于: {{item.date}} 浏览({{item.views}}) <a href="#reply">评论(12)</a></p>
+                    </div>
+                    <hr />
+                    <div class="content">
+                        <p>{{item.content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="common detail_common" :class={has_message:flag} id="common_detail">
+                <span class="title">评论区</span>
+                <div v-for="item in commonInfo" class="message">
+                    <div>
+                        <p><span class="name">{{item.user_name}}：</span>发表于{{item.create_time}}</p>
+                        <span class="reply"><a href="#reply">【回复】</a></span>
+                    </div>
+                    <p>{{item.content}}</p>
+                </div>
+            </div>
+            <div class="info_common" id="info_common">
+                <span class="title"><a name="reply">发表评论</a></span>
+                <div class="person_info">
+                    <input ref="reply" value='-1' type="hidden"/>
+                    <input ref='name' type="text" placeholder="昵称" />
+                    <input ref='email' type="text" placeholder="邮箱"/>
+                </div>
+                <div class="common_text">
+                    <textarea ref='text' name="" id="" cols="30" rows="10" placeholder="请输入文本"></textarea>
+                </div>                  
+                <div class="code">
+                    <input ref='code' type="text" placeholder="验证码"/>
+                    <span v-html="codeImg" @click="randomCode"></span>
+                </div>        
+                <div class="btnBox">
+                    <button @click="submit">提交</button>
+                    <button @click='reset'>重写</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="module" id="random_cloud">
+                <span class="title">{{title}}</span>
+                <div class="random_list random_tag">
+                    <a href="" v-for="tag in tags" :style="{color:color(),fontSize:size()}">{{tag}}</a>
+                </div>
+            </div>
+            <div class="module" id="hot_news">
+                <span class="title">{{title}}</span>
+                <div class="random_list">
+                    <ul class="hot">
+                        <li :class="{underline:item.underline}" v-for="item in news"><a href="">{{item.content}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="module" id="new_common">
+                <span class="title">{{title}}</span>
+                <div class="random_list">
+                    <div v-for="item in common" :class="{underline:item.underline}" class="common">
+                        <div class="title">
+                            <span>{{item.title}}</span>
+                            <span>{{item.date}}</span>
+                        </div>
+                        <div class="desc"><a href="">{{item.desc}}</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="module">
+                <span class="title">友情链接</span>
+                <div class="random_list">
+                    <div class="link underline">
+                        <div class="title">
+                            <a>挨踢茶馆</a>
+                            <a>个人博客</a>
+                            <a>佛布朗斯基</a>
+                        </div>
+                    </div>
+                    <div class="link underline">
+                        <div class="title">
+                            <a>挨踢茶馆</a>
+                            <a>个人博客</a>
+                            <a>佛布朗斯基</a>
+                        </div>
+                    </div>
+                    <div class="link">
+                        <div class="title">
+                            <a>挨踢茶馆</a>
+                            <a>个人博客</a>
+                            <a>佛布朗斯基</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <ul>
+            <li v-for='item in content'><a>{{item}}</a></li>
+        </ul>
+        <P>{{right}}</P>
+    </footer>
+</body>
+
+<script src="../Js/vue.js"></script>
+<script src="../Js/base.js"></script>
+<script src="../Js/axios.min.js"></script>
+<script src="../Js/detail.js"></script>
+
+</html>

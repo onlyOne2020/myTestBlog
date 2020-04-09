@@ -1,0 +1,27 @@
+{
+  "name": "onlyoneblog",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlyOne2020/onlyOneBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onlyOne2020/onlyOneBlog/issues"
+  },
+  "homepage": "https://github.com/onlyOne2020/onlyOneBlog#readme",
+  "devDependencies": {
+    "mysql": "^2.18.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "svg-captcha": "^1.4.0",
+    "vue-router": "^3.1.6"
+  },
+  "description": ""
+}

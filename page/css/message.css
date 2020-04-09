@@ -1,0 +1,14 @@
+.left > .welcome{
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20px 15px 20px 15px;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 6px #5f5f5f;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.left > .welcome p{
+    color: red;
+    margin-bottom: 10px;
+}

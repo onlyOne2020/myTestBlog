@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+body,html{
+    background-image: url('../images/bg.jpg');
+}
+
+/* header style */
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #191818;
+}
+
+.container{
+    box-sizing: border-box;
+    width: 1170px;
+    padding-left: 10px;
+    line-height: 50px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.container a{
+    color: #fff;
+    font-size: 16px;
+}
+.container .nav{
+    margin-left: 40px;
+    flex: 1 1 auto;
+}
+.container .nav ul li{
+    float: left;
+    margin: 0 10px;
+}
+.container .search input{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+}
+.container .search button{
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+/* body style */
+.bodyer{
+    width: 1170px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* bodyer left style*/
+.bodyer > .left{
+    box-sizing: border-box;
+    padding: 10px 0px 0px 10px;
+    float: left;
+    width: 60%;
+}
+.bodyer > .left > .article_list >.el-pagination{
+    padding: 0;
+    margin: 20px 0px 40px 0px;
+}
+.bodyer > .left > .article_list >.el-pagination > .btn-prev{
+    margin: 0px 5px 0px 0px;
+}
+/* bodyer right style*/
+.bodyer > .right{
+    box-sizing: border-box;
+    padding: 10px 0px 0px 10px;
+    float: right;
+    width: 30%;
+}
+
+.right > .module{
+    background-color: #191818;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.right > .module > .title{
+    display: inline-block;
+    padding: 15px 0px 15px 15px;
+    width: 100%;
+    color: #f40;
+    border-radius:5px;
+}
+
+.right > .module > .random_list{
+    background-color: #1f1f1f;
+    border-radius:5px;
+}
+.right > .module > .random_tag{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 15px;
+}
+
+.right > .module > .random_list > a{
+    display: inline-block;
+    padding: 8px 0px 10px 0px;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* hot style */
+.right > .module > .random_list > .hot > li{
+    display: inline-block;
+    width:  98%;
+    padding: 8px 10px 10px 10px;
+}
+.right > .module > .random_list > .hot > .underline{
+    border-bottom: 1px rgb(59, 59, 59) solid;
+}
+
+.right > .module > .random_list > .hot > li >a{
+    color: #fff;
+    font-size: 12px;
+    
+}
+
+/* common style */
+.right > .module > .random_list > .common.underline{
+    border-bottom: 1px rgb(59, 59, 59) solid;
+}
+.right > .module > .random_list > .common > .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px 0px 15px;
+    color: #fff;
+    font-size: 14px;
+}
+.right > .module > .random_list > .common > .desc > a{
+    display: inline-block;
+    padding: 8px 10px 10px 15px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* link style */
+.right > .module > .random_list > .link.underline{
+    border-bottom: 1px rgb(59, 59, 59) solid;
+}
+.right > .module > .random_list > .link > .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px 10px 15px;
+    color: #fff;
+    font-size: 14px;
+}
+.right > .module > .random_list > .link > .desc > a{
+    display: inline-block;
+    padding: 8px 10px 10px 15px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* footer style */
+footer{
+    box-sizing: border-box;
+    width: 100%;
+    height: 20%;
+    background-color: #191818;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+footer > ul{
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer >ul > li{
+    color: #fff;
+    font-size: 14px;
+}
+
+footer > p{
+    margin: 20px auto;
+    width: 60%;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* common style */
+.left > .common{
+    box-sizing: border-box;
+    padding: 10px 15px 4px 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #5f5f5f;
+}
+
+.left > .has_message{
+    display: none;
+}
+
+.left > .common > .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.left > .common > .message{
+    box-sizing: border-box;
+    padding: 5px 0px;
+    border-top: #ccc dashed 1px;
+    border-bottom: #ccc dashed 1px;
+    margin: 20px 0px 30px 0px;
+    font-size: 14px;
+}
+
+.left > .common > .message div > p{
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.left > .common > .message div > .reply{
+    cursor: pointer;
+    color: rgb(92, 149, 196);
+}
+
+.left > .common > .message div > p > .name{
+    font-weight: bold;
+}
+.left > .common > .message  > p{
+    display: inline-block;
+    padding: 5px 0px;
+    margin-right: 10px;
+}

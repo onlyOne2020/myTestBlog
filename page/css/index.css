@@ -1,0 +1,71 @@
+/* content style */
+@font-face{
+    font-family: "icon";
+    src: url('../font/glyphicons-halflings-regular.woff2');
+}
+
+/* content left style*/
+.bodyer > .left > .everyday{
+    box-sizing: border-box;
+    padding: 20px 0px 0px 20px;
+    width: 100%;
+    height: 110px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px #5f5f5f;
+}
+.bodyer > .left > .everyday > span.edit{
+    font-size: 12px;
+    /* margin-left: 6px; */
+
+}
+.bodyer > .left > .everyday > span.title::after{
+    content: "\e122";
+    font-family: icon;
+    color: slateblue;
+    margin-left: 5px;
+}
+.bodyer > .left > .everyday p{
+    box-sizing: border-box;
+    padding-top: 8px;
+    font-size: 14px;
+}
+
+.bodyer > .left > .article_list > .article_item{  
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    box-shadow: 1px 1px 6px #5f5f5f;
+}
+
+.bodyer > .left > .article_list > .article_item > .title > a{
+    display: block;
+    box-sizing: border-box;
+    padding: 20px 0px 0px 20px;;
+    color: #13102b;
+    font-weight: 600;
+    font-size: 16px;
+}
+.bodyer > .left > .article_list > .article_item > .title:hover{
+    color: #767580;
+    cursor: pointer;
+}
+.bodyer > .left > .article_list > .article_item > .content{
+    box-sizing: border-box;
+    padding: 6px 0px 0px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.bodyer > .left > .article_list > .article_item > .remark{
+    box-sizing: border-box;
+    padding: 0px 0px 0px 20px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #1f1f1f;
+    color: #fff;
+}
